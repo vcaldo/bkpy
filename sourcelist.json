@@ -1,0 +1,14 @@
+{
+  "backup": {
+    "source": "/path/to/dir/1/",
+    "dest": "dest1/",
+    "provider": "drive",
+    "age": 1
+  },
+  "Feira": {
+    "source": "/path/to/dir/2/",
+    "dest": "dest2/",
+    "provider": "drive",
+    "age": 7
+  }
+}

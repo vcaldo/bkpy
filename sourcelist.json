@@ -1,14 +1,32 @@
 {
-  "backup": {
-    "source": "/path/to/dir/1",
-    "dest": "dest1/",
+  "lab": {
+    "source": "/home/vini/lab",
+    "dest": "backup/lightbringer/lab/",
     "provider": "drive",
     "age": 1
   },
-  "Feira": {
-    "source": "/path/to/dir/2",
-    "dest": "dest2/",
+  "thunderbird": {
+    "source": "/home/vini/.thunderbird",
+    "dest": "backup/lightbringer/thunderbird/",
     "provider": "drive",
-    "age": 7
+    "age": 1
+  },
+  "music": {
+    "source": "/home/vini/Music",
+    "dest": "backup/lightbringer/Music/",
+    "provider": "drive",
+    "age": 5
+  },
+  "pictures": {
+    "source": "/home/vini/Pictures",
+    "dest": "backup/lightbringer/Pictures/",
+    "provider": "drive",
+    "age": 5
+  },
+  "documents": {
+    "source": "/home/vini/Documents",
+    "dest": "backup/lightbringer/Documents/",
+    "provider": "drive",
+    "age": 5
   }
 }

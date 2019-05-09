@@ -16,7 +16,7 @@ if not os.path.exists("state/"):
 #tg_token = os.environ["TG_TOKEN"]
 #tg_channel = os.environ["TG_CHANNEL"]
 
-tg_token = "875674671:AAFCbNNPVVJNfDbmVxbVW0OIRLSfpJxvqhA"
+tg_token = ""
 #tg_channel = 1030377622
 tg_channel = "@statuslogs"
 

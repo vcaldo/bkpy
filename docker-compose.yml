@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  bkpy:
+    image: bkpy:latest
+    container_name: bkpy
+    hostname: bkpy
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./app/sourcelist.json:/app/sourcelist.json
+      - ./app/exclude.txt:/app/exclude.txt
+      - ./rclone.conf:/config/rclone/rclone.conf
+    

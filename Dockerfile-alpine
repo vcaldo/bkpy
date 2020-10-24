@@ -1,0 +1,35 @@
+FROM rclone/rclone
+
+ENV TIMEZONE="America/Sao_Paulo"
+ENV RCLONE_CONF="/config/rclone/rclone.conf"
+ENV SRC_FILE="/app/sourcelist.json"
+
+
+RUN cp /usr/share/zoneinfo/$TIMEZONE /etc/localtime
+RUN echo $TIMEZONE > /etc/timezone
+
+RUN apk update && apk add bash \
+    python3 \
+    python3-dev \
+    py3-pip \
+    libressl-dev \
+    libffi-dev \
+    gcc \
+    musl-dev \
+    openssh-client
+
+ADD app/ /app
+WORKDIR /app
+RUN chmod 755 /app/run-bkpy.sh
+RUN pip3 install -r requirements.txt
+
+ADD ssh/ /root/.ssh/
+RUN chmod 600 /root/.ssh/*
+ADD rclone.conf /config/rclone/
+
+RUN mkdir /etc/crontab
+RUN echo '* */6 * * * root /bin/bash /app/run-bkpy.sh' > /etc/crontab/root
+RUN crontab /etc/crontab/root
+
+ENTRYPOINT ["/usr/bin/env"]
+CMD ["crond", "-c", "/etc/crontab/", "-f"]

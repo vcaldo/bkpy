@@ -1,0 +1,26 @@
+{
+  "mamae:lab": {
+    "source": "mamae:/root/lab",
+    "dest": "/backup/mamae/lab/",
+    "provider": "drive",
+    "age": 2
+  },
+  "juggler:Videos": {
+    "source": "juggler:/home/vini/Videos",
+    "dest": "/backup/juggler/Videos/",
+    "provider": "drive",
+    "age": 7
+  },
+  "juggler:Documents": {
+    "source": "juggler:/home/vini/Documents",
+    "dest": "/backup/juggler/Documents/",
+    "provider": "drive",
+    "age": 5
+  },
+  "juggler:lab": {
+    "source": "juggler:/home/vini/lab",
+    "dest": "/backup/juggler/lab/",
+    "provider": "drive",
+    "age": 2
+  }
+}

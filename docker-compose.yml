@@ -2,7 +2,7 @@ version: '2'
 
 services:
   bkpy:
-    image: bkpy:latest
+    image: bkpy:alpine
     container_name: bkpy
     hostname: bkpy
     restart: always

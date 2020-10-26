@@ -28,7 +28,7 @@ RUN pip3 install -r requirements.txt
 RUN rm requirements.txt
 
 RUN mkdir /etc/crontab
-RUN echo '* */2 * * * . /app/set-env && /bin/bash /app/run-bkpy.sh > /proc/1/fd/1 2>/proc/1/fd/2' > /etc/crontab/root
+RUN echo '* */6 * * * . /app/set-env && /bin/bash /app/run-bkpy.sh > /proc/1/fd/1 2>/proc/1/fd/2' > /etc/crontab/root
 RUN crontab /etc/crontab/root
 
 ADD entrypoint-alpine.sh /opt/entrypoint.sh
